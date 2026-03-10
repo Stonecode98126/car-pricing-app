@@ -17,7 +17,7 @@ const VEHICLES = [
   },
   {
     id: "C",
-    name: "C 車",
+    name: "高空作業車",
     firstHour: 3500,
     extraHour: 1500,
     icon: "🚚",
