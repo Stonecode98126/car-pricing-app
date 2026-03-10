@@ -84,7 +84,7 @@ export default function Home() {
         </div>
         <div
           style={{
-            fontSize: "12px",
+            fontSize: "24px",
             color: "#64748b",
             letterSpacing: "0.05em",
           }}
