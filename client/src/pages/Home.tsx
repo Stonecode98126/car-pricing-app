@@ -82,14 +82,42 @@ export default function Home() {
             鴻德起重
           </div>
         </div>
-        <div
-          style={{
-            fontSize: "24px",
-            color: "#64748b",
-            letterSpacing: "0.05em",
-          }}
-        >
-          即時計價系統
+        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+          <div
+            style={{
+              fontSize: "24px",
+              color: "#64748b",
+              letterSpacing: "0.05em",
+            }}
+          >
+            即時計價系統
+          </div>
+          <a
+            href="tel:0939347885"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "7px",
+              background: "rgba(34,197,94,0.12)",
+              border: "1.5px solid rgba(34,197,94,0.35)",
+              borderRadius: "10px",
+              padding: "8px 16px",
+              fontSize: "14px",
+              fontWeight: 600,
+              color: "#4ade80",
+              textDecoration: "none",
+              letterSpacing: "0.03em",
+              transition: "all 0.2s ease",
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.background = "rgba(34,197,94,0.22)";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.background = "rgba(34,197,94,0.12)";
+            }}
+          >
+            📞 0939-347-885
+          </a>
         </div>
       </header>
 
@@ -273,6 +301,55 @@ export default function Home() {
               : `首小時 NT$${selectedVehicle.firstHour.toLocaleString()} + 續 ${selectedHours - 1} 小時 × NT$${selectedVehicle.extraHour.toLocaleString()}`}
           </div>
         </section>
+
+        {/* Boom Length Calculator Link */}
+        <section style={{ marginTop: "24px" }}>
+          <a
+            href="https://stonecode98126.github.io/my-Calculation-of-boom-length/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              background: "rgba(255,255,255,0.03)",
+              border: "1.5px solid rgba(255,255,255,0.08)",
+              borderRadius: "14px",
+              padding: "20px 24px",
+              textDecoration: "none",
+              color: "#94a3b8",
+              transition: "all 0.2s cubic-bezier(0.4,0,0.2,1)",
+            }}
+            onMouseEnter={(e) => {
+              const el = e.currentTarget as HTMLAnchorElement;
+              el.style.background = "rgba(168,85,247,0.10)";
+              el.style.border = "1.5px solid rgba(168,85,247,0.4)";
+              el.style.color = "#f1f5f9";
+              el.style.boxShadow = "0 0 0 1px rgba(168,85,247,0.2), 0 4px 20px rgba(168,85,247,0.08)";
+            }}
+            onMouseLeave={(e) => {
+              const el = e.currentTarget as HTMLAnchorElement;
+              el.style.background = "rgba(255,255,255,0.03)";
+              el.style.border = "1.5px solid rgba(255,255,255,0.08)";
+              el.style.color = "#94a3b8";
+              el.style.boxShadow = "none";
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+              <span style={{ fontSize: "28px" }}>📐</span>
+              <div>
+                <div style={{ fontSize: "14px", fontWeight: 600, color: "#cbd5e1", marginBottom: "3px" }}>
+                  施工吊桿長度計算器
+                </div>
+                <div style={{ fontSize: "11px", color: "#475569", letterSpacing: "0.04em" }}>
+                  計算吊桿長度・仰角・三角函數
+                </div>
+              </div>
+            </div>
+            <span style={{ fontSize: "18px", opacity: 0.4 }}>↗</span>
+          </a>
+        </section>
+
       </main>
 
       {/* Footer */}
@@ -283,9 +360,16 @@ export default function Home() {
           textAlign: "center",
           fontSize: "12px",
           color: "#334155",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "16px",
         }}
       >
-        © 2025 鴻德起重・All Rights Reserved
+        <span>© 2025 鴻德起重・All Rights Reserved</span>
+        <span style={{ fontSize: "10px", color: "#1e293b", letterSpacing: "0.08em" }}>
+          Stonecode制作
+        </span>
       </footer>
     </div>
   );
