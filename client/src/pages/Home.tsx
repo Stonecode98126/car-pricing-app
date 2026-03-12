@@ -82,7 +82,7 @@ export default function Home() {
             鴻德起重
           </div>
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: "10px" }}>
           <div
             style={{
               fontSize: "24px",
