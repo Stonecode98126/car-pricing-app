@@ -3,7 +3,7 @@ import { useState } from "react";
 const VEHICLES = [
   {
     id: "A",
-    name: "吊卡及7噸吊車",
+    name: "7噸吊車",
     firstHour: 3000,
     extraHour: 1500,
     icon: "🚛",
@@ -17,9 +17,9 @@ const VEHICLES = [
   },
   {
     id: "C",
-    name: "高空作業車",
-    firstHour: 3500,
-    extraHour: 1500,
+    name: "5噸卡吊",
+    firstHour: 3000,
+    extraHour: 1200,
     icon: "🚚",
   },
 ];
