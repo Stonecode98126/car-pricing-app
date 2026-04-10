@@ -5,7 +5,7 @@ const VEHICLES = [
     id: "A",
     name: "吊卡及7噸吊車",
     firstHour: 3000,
-    extraHour: 1200,
+    extraHour: 1500,
     icon: "🚛",
   },
   {
